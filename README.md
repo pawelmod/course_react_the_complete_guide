@@ -1,3 +1,30 @@
+1. How I created the project folder:
+> mkdir project_name
+> git init
+> create-react-app . --scripts-version1.1.5
+
+DONE
+
+2. use 
+> npm start
+
+or
+> yarn start
+
+to start local server
+```
+Compiled successfully!
+
+You can now view course_react_the_complete_guide in the browser.
+
+  http://localhost:3000/
+
+Note that the development build is not optimized.
+To create a production build, use yarn build.
+```
+
+
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
