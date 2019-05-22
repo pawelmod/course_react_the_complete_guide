@@ -1,17 +1,18 @@
-1. How I created the project folder:
-> mkdir project_name
-> git init
-> create-react-app . --scripts-version1.1.5
-
-DONE
-
-2. use 
-> npm start
-
+1. How I created the empty React project:
+```bash
+$ mkdir project_name
+$ git init
+$ create-react-app . --scripts-version1.1.5
+```
+2. Hot to run it: 
+```
+$npm start
+```
 or
-> yarn start
+```
+$yarn start
+```
 
-to start local server
 ```
 Compiled successfully!
 
@@ -23,7 +24,7 @@ Note that the development build is not optimized.
 To create a production build, use yarn build.
 ```
 
-
+# Original README.md file created by creat-react-app
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
