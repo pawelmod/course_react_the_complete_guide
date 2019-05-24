@@ -1,6 +1,6 @@
 import React from 'react';
 
-const myComponent02 = () => {
+const myComponent02 = (props) => {
     return  <h1>myComponent02</h1>;
 }
 

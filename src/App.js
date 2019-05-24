@@ -9,9 +9,9 @@ class App extends Component {
     return (
       <div className="App">
         <h1>App component</h1>
-          <MyComponent01/>
-          <MyComponent02/>
-          <MyComponent02/>
+        <MyComponent02 stringPar="stringValueAAA" intPar="intValue111"/>
+        <MyComponent02 stringPar="stringValueBBB" intPar="intValue222"></MyComponent02>
+        <MyComponent02 stringPar="stringValueCCC" intPar="intValue333"/>
       </div>
 
     );
