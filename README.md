@@ -39,10 +39,25 @@ you can store there objects.
 8. Event from parent component to child components.
 in html you have onclick but in jsx onClick (capital C)
 
-9. this.setState method in state components 
+9. this.setState method in state components to update the STATE varialbles. this.setState method is "merging" the parameters in the state object.
+(not overriding but merging)
 
 10. hooks in functional components to manage the state:
+please refere to official documentation for 'useState' method.
+important differenc: that aproach REPLACES the state (state in state-component merges the state)
+
+But, you can use useState method multiple times.
+So instead of heaving one huge state object, you could have multiple objectStates.
+
+example 
 ```
-
-
+const [componentState, setComponentState] = useState(
+    {
+        parameters:[
+            {stringPar:'stringValueAAA' , intPar: 111},
+            {stringPar:'stringValueBBB' , intPar: 222},
+            {stringPar:'stringValueCCC' , intPar: 333},
+        ]
+      }
+)
 ```
