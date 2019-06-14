@@ -61,3 +61,9 @@ const [componentState, setComponentState] = useState(
       }
 )
 ```
+
+11. passing method reference to the child component
+
+passing method reference to the child with value - option1
+
+passing method reference to the child with value - option2
