@@ -12,14 +12,15 @@ state = {
       {stringPar:'stringValueCCC' , intPar: 333},
   ]
 }
-  myButtonClickHandler = () =>
+
+  myButtonClickHandler = (intValue) =>
   {
     //alert("myButtonClickHandler"); 
     console.log("myButtonClickHandler");
     console.log("this.state.parameters[0].intPar: "+this.state.parameters[0].intPar);
 
 var i = this.state.parameters[0].intPar;
-i++;
+i = i + intValue;
 console.log("i: "+i);
 
     this.setState(
@@ -35,20 +36,21 @@ console.log("i: "+i);
     return (
       <div className="App">
         <h1>App component</h1>
-        <button onClick={this.myButtonClickHandler}>Button</button>
+        <button onClick={this.myButtonClickHandler.bind(this,5)}>Button+5 bind</button>
         <MyComponent02 
           stringPar={this.state.parameters[0].stringPar} 
-          intPar={this.state.parameters[0].intPar}/>
+          intPar={this.state.parameters[0].intPar}
+          method={() => this.myButtonClickHandler(1)}>+1 arrow function</MyComponent02>
 
         <MyComponent02 
           stringPar={this.state.parameters[1].stringPar} 
-          intPar={this.state.parameters[1].intPar}>NodeValue</MyComponent02>
+          intPar={this.state.parameters[1].intPar}
+          method={() => this.myButtonClickHandler(2)}>+2 arrow function</MyComponent02>
 
         <MyComponent02 
           stringPar={this.state.parameters[2].stringPar} 
           intPar={this.state.parameters[2].intPar}
-          method={this.myButtonClickHandler}
-          />
+          method={this.myButtonClickHandler.bind(this,3)}>+3 bind</MyComponent02>
       </div>
 
     );
