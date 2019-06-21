@@ -1,7 +1,10 @@
+// class component with state management (classic approach with state object and this.setState method)
+
 import React, { Component } from 'react';
 import './App.css';
 import MyComponent01 from './MyComponent/MyComponent01';
 import MyComponent02 from './MyComponent/MyComponent02';
+import MyComponent03 from './MyComponent/MyComponent03';
 
 class App extends Component {
 
@@ -32,11 +35,20 @@ console.log("i: "+i);
     );
   }
 
+  myMethodForComponent03 = (event) => {
+      this.setState(
+        { stringPar:event.target.value }
+      );
+  }
+
   render() {
     return (
       <div className="App">
         <h1>App component</h1>
         <button onClick={this.myButtonClickHandler.bind(this,5)}>Button+5 bind</button>
+
+        <h1>{this.state.stringPar}</h1>
+
         <MyComponent02 
           stringPar={this.state.parameters[0].stringPar} 
           intPar={this.state.parameters[0].intPar}
@@ -51,6 +63,8 @@ console.log("i: "+i);
           stringPar={this.state.parameters[2].stringPar} 
           intPar={this.state.parameters[2].intPar}
           method={this.myButtonClickHandler.bind(this,3)}>+3 bind</MyComponent02>
+
+        <MyComponent03 parentMethod={this.myMethodForComponent03}></MyComponent03>
       </div>
 
     );

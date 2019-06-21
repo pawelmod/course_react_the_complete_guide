@@ -1,3 +1,5 @@
+//simple function component
+
 import React from 'react';
 
 function MyComponent01(){

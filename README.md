@@ -63,7 +63,20 @@ const [componentState, setComponentState] = useState(
 ```
 
 11. passing method reference to the child component
+```
+method={this.myButtonClickHandler}
+```
 
-passing method reference to the child with value - option1
+passing method reference to the child with value - option1: binding
+```
+method={this.myButtonClickHandler.bind(this,5)
+```
 
-passing method reference to the child with value - option2
+passing method reference to the child with value - option2: arrow function
+```
+method={() => this.myButtonClickHandler(2)}
+```
+
+12. calling the web method with parameters from child component
+So we actually have the other direct binding, from child to parent component-menthod.
+Method is passed as a prop. 

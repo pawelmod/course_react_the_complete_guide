@@ -1,3 +1,5 @@
+//simple class component
+
 import React from 'react';
 
 const myComponent02 = (props) => {

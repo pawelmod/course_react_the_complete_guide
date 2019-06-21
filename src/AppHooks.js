@@ -1,3 +1,5 @@
+//function component with state management by React JS Hooks. using useState method
+
 import React, { useState } from 'react';
 import './App.css';
 import MyComponent01 from './MyComponent/MyComponent01';
